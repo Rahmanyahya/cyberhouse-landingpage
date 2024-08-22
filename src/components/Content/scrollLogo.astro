@@ -1,0 +1,43 @@
+---
+import Iotanic from '~/assets/IOTANIC.webp';
+import Undiksa from '~/assets/Logo_undiksha.webp';
+import Binus from '~/assets/lg-65d603bd69aab-Binus-University-Bina-Nusanta.webp';
+import { Image } from 'astro:assets';
+import '~/styles/Scroll.css';
+---
+
+<center>
+		<div
+			class="logo-container"
+			id="logo-container">
+			<div class="logo">
+				<Image
+					src={Iotanic}
+					alt="Iotanic"
+					width={400}
+				/>
+				<Image
+					src={Binus}
+					alt="Bajategal"
+					width={250}
+				/>
+				<Image
+					src={Iotanic}
+					alt="Iotanic"
+					width={400}
+				/>
+				<Image
+					src={Undiksa}
+					alt="Undiksa"
+					width={250}
+				/>
+			</div>
+	</div>
+</center>
+
+<script>
+	const logo = document.querySelector('.logo')?.cloneNode(true);
+	if (logo) {
+		document.querySelector('.logo-container')?.appendChild(logo);
+	}
+</script>

@@ -1,0 +1,38 @@
+---
+import ContentSection from "./content-section.astro";
+
+const mentor = [
+    {
+        nama: "Jim Geovendi",
+        title: 'Cyber Security Expert',
+        summary: "Seorang praktisi Cyber Security dengan pengalaman lebih dari 10 tahun serta sangat profesional",
+        foto: '../assets/jim.png'
+    },
+    {
+        nama: "Ono Purbo",
+        title: 'Cyber Security Expert',
+        summary: "Seorang praktisi Cyber Security dengan pengalaman lebih dari 10 tahun serta sangat profesional",
+        foto: '../assets/ono.png'
+    },
+    {
+        nama: "Putra Aji",
+        title: 'Cyber Security Expert',
+        summary: "Seorang praktisi Cyber Security dengan pengalaman lebih dari 10 tahun serta sangat profesional",
+        foto: '../assets/putra.png'
+    }
+]
+---
+
+<section>
+    <center>
+        <h1 class="text-4xl font-bold text-[#f5ba20]" >Meet Our Mentor</h1>
+        <p class="font-bold text-lg" >More Than 10+  Years Experience</p>
+
+        <div>
+          {
+            mentor.map(({}))
+          }
+        </div>
+    </center>
+
+</section>

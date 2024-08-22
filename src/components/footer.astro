@@ -1,0 +1,56 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { FooterLink } from '~/types';
+
+const links: Array<FooterLink> = [
+	{
+		url: '#',
+		description: '',
+		icon: 'mdi:home',
+	},
+	{
+		url: 'https://www.instagram.com/cyberhouse.id?igsh=NDZxa3hlcjQxY3ht',
+		description: '',
+		icon: 'fa-brands:instagram',
+	},
+	{
+		url: 'https://discord.com/invite/4NhxAkph',
+		description: '',
+		icon: 'fa-brands:discord',
+	},
+	{
+		url: 'https://www.linkedin.com/company/cyber-house/mycompany/',
+		description: '',
+		icon: 'fa-brands:linkedin',
+	},
+];
+---
+
+<footer class="relative flex h-64 items-center justify-center">
+	<ul class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+		{
+			links.map((link) =>
+				link.url == '#' ? (
+					<a
+						class="group flex size-16 items-center justify-center rounded-full border-2 border-white p-4 hover:border-[#fab520] hover:text-[#fab520]"
+						href={link.url}>
+						<Icon
+							class="size-full group-hover:text-[#fab520]"
+							name={link.icon}
+						/>
+					</a>
+				) : (
+					<a
+						class="group flex size-16 items-center justify-center rounded-full border-2 border-white p-4 hover:border-[#fab520] hover:text-[#fab520]"
+						href={link.url}
+						target="_blank">
+						<Icon
+							class="size-full group-hover:text-[#fab520]"
+							name={link.icon}
+						/>
+					</a>
+				)
+			)
+		}
+	</ul>
+</footer>

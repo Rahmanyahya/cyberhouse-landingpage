@@ -1,0 +1,55 @@
+---
+import ContentSection from '~/components/content-section.astro';
+import PersonIcon from '@astropub/icons/Person'
+const testimoni = [
+	{
+	    nama: 'Sarah',
+		title: 'Mahasiswi Sistem Informasi',
+		comment: 'Cyber House telah mengubah pandangan saya tentang cyber security. Materinya sangat jelas, dan para instrukturnya selalu siap membantu. Setelah bootcamp ini, saya merasa lebih percaya diri dengan kemampuan saya.'
+	},
+	{
+	    nama: 'Rizky',
+		title: 'Junior Penetration Tester',
+		comment: 'Bootcamp di Cyber House memberi saya dasar yang kuat untuk memulai karir di cyber security. Programnya terstruktur dengan baik, dan ilmu yang saya peroleh bisa langsung diterapkan dalam pekerjaan. Sangat saya rekomendasikan untuk siapa pun yang serius menekuni bidang ini'
+	},
+	{
+		nama: 'Andini',
+		title: 'Fresh Graduate Teknik Informatika',
+		comment: 'Saya sangat menyukai bagaimana Cyber House menggabungkan teori dengan praktik. Tantangan yang diberikan membuat saya berpikir kritis dan belajar dari kesalahan. Setelah bootcamp, saya mendapatkan wawasan baru tentang cara melindungi data dan sistem dari ancaman sibe'
+	}
+]
+---
+
+<ContentSection
+	title="Lihat Sendiri Hasilnya"
+	id="">
+	<div class="container mx-auto">
+		<div class="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
+			
+			{
+				testimoni.map(({nama,title,comment}) => (
+				<div class="rounded-lg bg-[#f5ba20] p-6 shadow-lg">
+				<div class="mb-4 flex items-center gap-3">
+					<PersonIcon size="25" class="mt-[-2.1rem]"/>
+					<div>
+						<h3 class="font-semibold text-lg">{nama}</h3>
+						<p class="text-gray-600">{title}</p>
+					</div>
+				</div>
+				<p class="text-gray-700">{comment}</p>
+			</div>
+				))
+			}
+			</div>
+
+	</div>
+	<center>
+		<div>
+			<p class="w-[50%]" >Cyber House tidak akan bisa melahirkan ahli Cyber Security sebanyak ini jika Kami tidak komitmen dan disiplin mendeliver kurikulum serta fasilitas after-sales service terbaik.</p>
+			<button class="mt-[2rem] bg-[#f5ba20] px-[8rem] py-3 rounded-md hover:bg-transparent border-2 border-[#f5ba20] transition-all duration-500 max-sm:px-[5rem]" >
+				<a>Join Now</a>
+			</button>
+			<h1 class="mt-[2rem] font-bold text-lg" >MEREKA SUDAH SATU LANGKAH DI DEPANMU, YAKIN MASIH MAU NGANGGUR TERUS?</h1>
+		</div>
+	</center>
+</ContentSection>

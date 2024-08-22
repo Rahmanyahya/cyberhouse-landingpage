@@ -1,0 +1,16 @@
+---
+import VideoBg from '~/assets/Background.mp4';
+---
+
+<div class="absolute inset-0 z-[-1] overflow-hidden ">
+	<video
+		class="absolute inset-0 h-full w-full object-cover"
+		muted
+		loop
+		autoplay>
+		<source
+			src={VideoBg}
+			type="video/mp4"
+		/>
+	</video>
+</div>

@@ -1,0 +1,153 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { NavItem } from '~/types';
+import Logo from '~/assets/Logo.webp';
+import { Image } from 'astro:assets';
+
+
+---
+
+<header
+	id="page-header"
+	class="absolute top-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white">
+	<a
+		class="flex items-center gap-3 border-none hover:!text-default"
+		href="#">
+		<h1 class="sr-only">Cyber House</h1>
+		<Image
+			alt="Logo"
+			src={Logo}
+			width={40}
+		/>
+	</a>
+	<div>
+		<div class="flex items-center gap-6">
+			<nav class="hidden sm:block">
+				<ul class="flex items-center gap-6">
+					<div class="border-2 border-[#f5ba20] text-[#f5ba20] px-5 py-1 rounded-md hover:bg-[#f5ba20] hover:text-white transition-all delay-200" >
+						<a style="text-decoration: none; color: inherit;" >About us</a>
+					</div>
+					<div class="text-[#fab520]" >|</div>
+					<div class=" text-white bg-[#fab520] px-5 py-1 rounded-md hover:border-2 border-[#f5ba20]  hover:text-[#f5ba20] transition-all delay-200 hover:bg-transparent" >
+						<a style="text-decoration: none; color: inherit;" >Join Now</a>
+					</div>
+				</ul>
+			</nav>
+			<button
+				id="open-nav-button"
+				type="button"
+				class="btn sm:hidden"
+				aria-label="Navigation">
+				<Icon
+					name="mdi:menu"
+					class="size-8 hover:text-[#f5ba20]"
+				/>
+			</button>
+		</div>
+		<div
+			id="menu-modal"
+			class="modal hidden"
+			aria-hidden="true">
+			<div class="fixed inset-0 bg-default px-8 py-4 text-default">
+				<div
+					class="space-y-4"
+					role="dialog"
+					aria-modal="true">
+					<header class="text-right">
+						<button
+							id="close-nav-button"
+							type="button"
+							class="btn"
+							aria-label="Close navigation">
+							<Icon
+								name="mdi:close"
+								class="size-8 hover:text-[#f5ba20]"
+							/>
+						</button>
+					</header>
+					<div class="flex justify-center">
+						<Image
+							alt="Logo"
+							src={Logo}
+							width={80}
+						/>
+					</div>
+					<nav>
+						<ul>
+							<center>
+						       <div class="grid grid-rows-2 gap-10 text-xl mt-[4rem]" >
+								<div>
+									<a>About Us</a>
+								</div>
+							<div>
+								<a>Join Now</a>
+							</div>
+							   </div>
+							   </div>
+							</center>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<script>
+	import MicroModal from 'micromodal';
+	import invariant from 'tiny-invariant';
+
+	const menuModalId = 'menu-modal';
+
+	const header = document.querySelector('#page-header') as HTMLElement;
+	const page = document.documentElement;
+	const menu = document.querySelector(`#${menuModalId} ul`);
+	const openNavButton = document.querySelector('#open-nav-button');
+	const closeNavButton = document.querySelector('#close-nav-button');
+
+	invariant(header, 'header should not be null');
+	invariant(menu, 'menu should not be null');
+	invariant(openNavButton, 'openNavButton should not be null');
+	invariant(closeNavButton, 'closeNavButton should not be null');
+
+	const openMenu = () => {
+		MicroModal.show(menuModalId, { disableScroll: true });
+	};
+
+	const closeMenu = () => {
+		MicroModal.close(menuModalId);
+	};
+
+	openNavButton.addEventListener('click', openMenu);
+	closeNavButton.addEventListener('click', closeMenu);
+
+	document.addEventListener('scroll', () => {
+		const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+		header.classList.toggle('fixed-header', d < 0);
+	});
+
+	menu.addEventListener('click', (event) => {
+		if ((event.target as HTMLElement).tagName === 'A') {
+			closeMenu();
+		}
+	});
+</script>
+
+<noscript>
+	<style>
+		#open-nav-button {
+			border: none;
+			display: none;
+		}
+	</style>
+</noscript>
+
+<style>
+	.fixed-header {
+		@apply fixed bottom-auto top-0;
+		@apply border-default bg-default text-default;
+	}
+	.modal.is-open {
+		@apply block;
+	}
+</style>
