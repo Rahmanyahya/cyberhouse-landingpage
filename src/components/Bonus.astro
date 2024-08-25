@@ -1,0 +1,125 @@
+---
+import ContentSection from "./content-section.astro";
+import { Image } from "astro:assets";
+import Bonus1 from "../assets/Bonus/live-mentor.webp"
+import Bonus2 from "../assets/Bonus/Portfolio.webp"
+import Bonus3 from "../assets/Bonus/Cv.webp"
+import Bonus4 from "../assets/Bonus/Update.webp"
+import Bonus5 from "../assets/Bonus/promotion.webp"
+---
+<ContentSection id="" title="SETELAH BELAJAR DI CYBER HOUSE, APA SAJA BONUS YANG ANDA DAPATKAN?" >
+ 
+  <center>
+      
+  <div class="max-w-7xl max-sm:max-w-full">
+    <!-- Bonus 1 -->
+     <div class="grid grid-cols-2  max-lg:grid-cols-1 max-sm:max-w-full">
+       <div class="p-5 max-lg:order-1">
+         <center>
+           <h1 class="font-bold text-[#f5ba20] text-5xl" >01</h1>
+           <h1 class="font-bold text-white text-3xl max-sm:text-xl" >PRIVATE LIVE MENTORING & DISCUSSION</h1>
+           <div class="bg-[#f5ba20] rounded-full w-[50%] py-2 mt-[1rem] max-sm:w-[80%]" >
+             <h1 class="text-white " >Senilai Rp.950.000/Bulan</h1>
+           </div>
+           <p class="mt-[1rem] max-lg:w-[90%] max-sm:w-full" >Kamu akan mendapatkan fasilitas mentoring dua minggu sekali dengan para mentor yang telah memberikan banyak materi serta dapat berdiskusi langsung dengan mentor.</p>
+         </center>
+       </div>
+ 
+       <div>
+         <center>
+           <Image alt="benefit 1" src={Bonus1} width={500} class="mt-[-3rem]" />
+         </center>
+     </div>
+     </div>
+ 
+     <div class="max-w-7xl max-sm:max-w-full  max-sm:mt-[2rem]">
+       <!-- Bonus 2 -->
+        <div class="grid grid-cols-2  max-lg:grid-cols-1">
+ 
+         <div>
+           <center>
+             <Image loading="lazy" alt="benefit 1" src={Bonus2} width={500} class="" />
+           </center>
+       </div>
+ 
+          <div class="p-5 max-lg:order-1">
+            <center>
+              <h1 class="font-bold text-[#f5ba20] text-5xl" >02</h1>
+              <h1 class="font-bold text-white text-3xl max-sm:text-xl" >MODUL TAMBAHAN PENUNJANG PORTFOLIO</h1>
+              <div class="bg-[#f5ba20] rounded-full w-[50%] py-2 mt-[1rem] max-sm:w-[80%]" >
+                <h1 class="text-white " >Senilai Rp.1.200.000/Bulan</h1>
+              </div>
+              <p class="mt-[1rem] max-sm:w-[105%]" >Setelah menyelesaikan pembelajaran, kamu akan mendapatkan modul yang bisa digunakan seumur hidup untuk mencari pekerjaan dan memperkuat portfoliomu.</p>
+            </center>
+          </div>   
+        </div>
+ 
+        <div class="max-w-7xl max-sm:max-w-full  max-sm:mt-[0.5rem]">
+         <!-- Bonus 3 -->
+          <div class="">
+           <div>
+             <Image loading="lazy" alt="Bonus3" src={Bonus3} width={500} />
+           </div>
+
+           <div class="" >
+            <center>
+              <h1 class="font-bold text-[#f5ba20] text-5xl" >03</h1>
+              <h1 class="font-bold text-white text-3xl max-sm:text-xl" >BIMBINGAN CARA LAMAR KERJA & <br class="max-sm:hidden" > MEMBUAT CV MENARIK</h1>
+              <div class="bg-[#f5ba20] rounded-full w-[25%] py-2 mt-[1rem] max-lg:w-[50%] max-sm:w-[80%]" >
+                <h1 class="text-white " >Senilai Rp.750.000/Bulan</h1>
+              </div>
+              <p class="mt-[1rem] w-[60%] max-lg:w-[90%] max-sm:w-[98%]" >Meskipun sesi belajar selesai, Cyber House akan tetap membantu kamu dengan bimbingan untuk memperbaiki CV dan melamar pekerjaan dengan benar.</p>
+            </center>
+           </div>
+          </div>
+        </div>
+
+        <div class="max-w-7xl max-sm:max-w-full mt-[4rem] max-sm:mt-[6rem] ">
+          <!-- Bonus 4 -->
+           <div class="grid grid-cols-2  max-lg:grid-cols-1">
+             <div class="p-5 max-lg:order-1">
+               <center>
+                 <h1 class="font-bold text-[#f5ba20] text-5xl" >04</h1>
+                 <h1 class="font-bold text-white text-3xl max-sm:text-xl" >DAILY TREND UPDATE</h1>
+                 <div class="bg-[#f5ba20] rounded-full w-[50%] py-2 mt-[1rem] max-sm:w-[80%]" >
+                   <h1 class="text-white " >Senilai Rp.500.000/Bulan</h1>
+                 </div>
+                 <p class="mt-[1rem] max-sm:w-full" >Setiap harinya kamu akan mendapatkan banyak informasi terbaru baik dalam lowongan pekerjaan dari tim kami, sehingga kamu tidak akan terlewatkan kesempatan sedikitpun.</p>
+               </center>
+             </div>
+       
+             <div>
+               <center>
+                 <Image loading="lazy" alt="benefit 1" src={Bonus4} width={500} class="mt-[-5rem]" />
+               </center>
+           </div>
+           </div>
+
+
+           <div class="max-w-7xl mt-[2rem] max-sm:max-w-full">
+            <!-- Bonus 5 -->
+             <div class="grid grid-cols-2  max-lg:grid-cols-1">
+      
+              <div>
+                <center>
+                  <Image loading="lazy" alt="benefit 1" src={Bonus5} width={500} class="" />
+                </center>
+            </div>
+      
+               <div class="p-5 max-lg:order-1">
+                 <center>
+                   <h1 class="font-bold text-[#f5ba20] text-5xl" >05</h1>
+                   <h1 class="font-bold text-white text-3xl max-sm:text-xl" >BERKESEMPATAN UNTUK DIPROMOSIKAN KE PERUSAHAAN</h1>
+                   <div class="bg-[#f5ba20] rounded-full w-[50%] py-2 mt-[1rem] max-xl:w-[50%] max-sm:w-[80%]" >
+                     <h1 class="text-white " >Senilai Rp.650.000/Bulan</h1>
+                   </div>
+                   <p class="mt-[1rem] max-sm:w-full" >kamu akan mendapatkan fasilitas mudah untuk dipromosikan jika memiliki potensi yang baik maka tim kami akan membantu untuk pengajuan namamu.</p>
+                 </center>
+               </div>   
+             </div>
+      
+  </center>
+
+    
+
+</ContentSection>

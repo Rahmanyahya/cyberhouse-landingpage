@@ -5,8 +5,9 @@
 .logo {
   flex-shrink: 0;
   display: flex;
-  animation: infinite-scroll 5s linear infinite;
+  animation: infinite-scroll 7s linear infinite;
 }
+
 
 @keyframes infinite-scroll {
   from {

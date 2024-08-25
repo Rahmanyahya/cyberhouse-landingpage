@@ -4,7 +4,7 @@ import type { FooterLink } from '~/types';
 
 const links: Array<FooterLink> = [
 	{
-		url: '#',
+		url: '/#Home',
 		description: '',
 		icon: 'mdi:home',
 	},
@@ -26,11 +26,11 @@ const links: Array<FooterLink> = [
 ];
 ---
 
-<footer class="relative flex h-64 items-center justify-center">
+<footer class="relative flex h-20 items-center justify-center">
 	<ul class="grid grid-cols-2 gap-4 sm:grid-cols-4">
 		{
 			links.map((link) =>
-				link.url == '#' ? (
+				link.icon == 'mdi:home' ? (
 					<a
 						class="group flex size-16 items-center justify-center rounded-full border-2 border-white p-4 hover:border-[#fab520] hover:text-[#fab520]"
 						href={link.url}>

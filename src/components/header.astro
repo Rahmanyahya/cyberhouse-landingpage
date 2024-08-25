@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import type { NavItem } from '~/types';
-import Logo from '~/assets/Logo.webp';
+import Logo from '~/assets/home/Logo.webp';
 import { Image } from 'astro:assets';
 
 
@@ -12,7 +12,7 @@ import { Image } from 'astro:assets';
 	class="absolute top-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white">
 	<a
 		class="flex items-center gap-3 border-none hover:!text-default"
-		href="#">
+		href="/#Home">
 		<h1 class="sr-only">Cyber House</h1>
 		<Image
 			alt="Logo"
@@ -25,11 +25,11 @@ import { Image } from 'astro:assets';
 			<nav class="hidden sm:block">
 				<ul class="flex items-center gap-6">
 					<div class="border-2 border-[#f5ba20] text-[#f5ba20] px-5 py-1 rounded-md hover:bg-[#f5ba20] hover:text-white transition-all delay-200" >
-						<a style="text-decoration: none; color: inherit;" >About us</a>
+						<a style="text-decoration: none; color: inherit;" href="/#Aboutus">About us</a>
 					</div>
 					<div class="text-[#fab520]" >|</div>
 					<div class=" text-white bg-[#fab520] px-5 py-1 rounded-md hover:border-2 border-[#f5ba20]  hover:text-[#f5ba20] transition-all delay-200 hover:bg-transparent" >
-						<a style="text-decoration: none; color: inherit;" >Join Now</a>
+						<a style="text-decoration: none; color: inherit;" href="/join-now" >Join Now</a>
 					</div>
 				</ul>
 			</nav>
@@ -66,21 +66,24 @@ import { Image } from 'astro:assets';
 						</button>
 					</header>
 					<div class="flex justify-center">
-						<Image
-							alt="Logo"
-							src={Logo}
-							width={80}
-						/>
+						<a href="/#Home">
+
+							<Image
+								alt="Logo"
+								src={Logo}
+								width={80}
+							/>
+						</a>
 					</div>
 					<nav>
 						<ul>
 							<center>
 						       <div class="grid grid-rows-2 gap-10 text-xl mt-[4rem]" >
 								<div>
-									<a>About Us</a>
+									<a href="/#Aboutus">About Us</a>
 								</div>
 							<div>
-								<a>Join Now</a>
+								<a href="/join-now">Join Now</a>
 							</div>
 							   </div>
 							   </div>

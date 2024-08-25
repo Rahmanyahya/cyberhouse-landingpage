@@ -1,38 +1,33 @@
 ---
 import ContentSection from "./content-section.astro";
+import { Image } from "astro:assets";
 
-const mentor = [
-    {
-        nama: "Jim Geovendi",
-        title: 'Cyber Security Expert',
-        summary: "Seorang praktisi Cyber Security dengan pengalaman lebih dari 10 tahun serta sangat profesional",
-        foto: '../assets/jim.png'
-    },
-    {
-        nama: "Ono Purbo",
-        title: 'Cyber Security Expert',
-        summary: "Seorang praktisi Cyber Security dengan pengalaman lebih dari 10 tahun serta sangat profesional",
-        foto: '../assets/ono.png'
-    },
-    {
-        nama: "Putra Aji",
-        title: 'Cyber Security Expert',
-        summary: "Seorang praktisi Cyber Security dengan pengalaman lebih dari 10 tahun serta sangat profesional",
-        foto: '../assets/putra.png'
-    }
-]
+import mentor1  from '../assets/mentor/ibnu.png'
 ---
 
-<section>
+<section  >
     <center>
-        <h1 class="text-4xl font-bold text-[#f5ba20]" >Meet Our Mentor</h1>
-        <p class="font-bold text-lg" >More Than 10+  Years Experience</p>
-
-        <div>
-          {
-            mentor.map(({}))
-          }
-        </div>
+        <h1 class="text-4xl font-extrabold text-[#f5ba20]" >MENTOR KAMI</h1>
+        <p class="font-bold text-lg" >Lebih Dari 10+ Tahun Pengalaman</p>
+    </center>
+    <center>
+        <div class=" pt-16">
+            <div class="bg-offset rounded-md  shadow-lg w-[25%] max-lg:w-[50%] max-md:w-[45%] max-sm:w-[90%]" style=" box-shadow: 0 0 0 5px #f5ba20, 0 0 50px #f5ba19, 0 0 70px #f5ba18" >
+               <Image loading="lazy" alt="gambar1" src={mentor1} width={300}  />
+   
+               <div>
+                   <h1 class="font-bold " >Ibnu Faisal</h1>
+                   <h1 class="font-bold text-[#f5ba20]" >Profesional Cyber Security</h1>
+                   <p class="w-[90%] p-[1rem] " style="font-size: 11px;"> seorang profesional terampil di bidang keamanan siber dengan pengalaman yang luas dalam melindungi sistem informasi dan jaringan dari berbagai ancaman digital</p>
+               </div>
+            </div>
+            <div class="mt-[4rem]" >
+                <a href="/join-now" >
+                    <button class="mt-[2rem] bg-[#f5ba20] px-[8rem] py-3 rounded-md hover:bg-transparent border-2 border-[#f5ba20] transition-all duration-500 max-sm:px-[5rem]" >
+                        Join Now
+                    </button></a>
+            </div>
+         </div>  
     </center>
 
 </section>

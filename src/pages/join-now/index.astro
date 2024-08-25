@@ -1,0 +1,168 @@
+---
+import Header from "~/components/header.astro";
+import Footer from "~/components/footer.astro";
+import "~/styles/index.css";
+---
+
+<!doctype html>
+<html
+	lang="en"
+	class="h-full overflow-hidden motion-safe:scroll-smooth"
+	data-theme="dark"
+>
+	<head>
+		<title>Cyber House</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+	</head>
+	<body
+		class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
+	>
+		<Header />
+		<section>
+			<center>
+				<div
+					class="grid w-[50%] gap-3 px-2 py-28 max-lg:w-[80%] max-sm:w-full"
+				>
+					<div class="rounded-md bg-offset p-2">
+						<h1 class="text-md text-left font-bold">
+							Isi Data Diri Kamu
+						</h1>
+						<form id="orderForm">
+                            <div class="mt-5 grid grid-cols-2 gap-3 text-left">
+                                <div>
+                                    <label
+                                        for="firstName"
+                                        class="font-bold text-lg"
+                                    >
+                                        First Name
+                                    </label>
+                                    <input
+                                        id="firstName"
+                                        type="text"
+                                        class="w-full rounded-lg p-2 px-5 text-black text-lg"
+                                        placeholder="First Name"
+                                        name="first name"
+                                    />
+                                </div>
+                                <div>
+                                    <label
+                                        for="lastName"
+                                        class="font-bold text-lg"
+                                    >
+                                        Last Name
+                                    </label>
+                                    <input
+                                        id="lastName"
+                                        type="text"
+                                        class="w-full rounded-lg p-2 px-5 text-black text-lg"
+                                        placeholder="Last Name"
+                                        name="last name"
+                                    />
+                                </div>
+                            </div>
+                            <div class="mt-[1rem] text-left">
+                                <label
+                                    for="noTelephone"
+                                    class="font-bold text-lg"
+                                >
+                                    No Telephone
+                                </label>
+                                <input
+                                    id="noTelephone"
+                                    type="tel"
+                                    class="w-full rounded-lg p-2 px-5 text-black text-lg"
+                                    placeholder="No Telephone"
+                                    name="noTelephone"
+                                />
+                            </div>
+                            <div class="mt-[1rem] text-left">
+                                <label for="email" class="font-bold text-lg">
+                                    Email
+                                </label>
+                                <input
+                                    id="email"
+                                    type="email"
+                                    class="w-full rounded-lg p-2 px-5 text-black text-lg"
+                                    placeholder="Email"
+                                    name="email"
+                                />
+                            </div>
+                            <div class="my-[1rem] text-left">
+                                <h1 class="font-bold text-lg">Kesibukan</h1>
+                                <div>
+                                    <input
+                                        type="radio"
+                                        id="pelajar"
+                                        name="kesibukan"
+                                        value="Pelajar"
+                                    />
+                                    <label for="pelajar">Pelajar</label>
+                                    <input
+                                        type="radio"
+                                        id="bekerja"
+                                        name="kesibukan"
+                                        value="Bekerja"
+                                        class="ml-5"
+                                    />
+                                    <label for="bekerja">Bekerja</label>
+                                </div>
+                            </div>
+                            <button
+                                type="submit"
+                                id="submitButton"
+                                class="my-[2rem] rounded-md border-2 border-[#f5ba20] bg-[#f5ba20] px-[8rem] py-3 transition-all duration-500 hover:bg-transparent max-sm:px-[5rem]"
+                            >
+                                Join Now
+                            </button>
+                        </form>
+					</div>
+				</div>
+			</center>
+		</section>
+	</body>
+	<Footer />
+
+	<script type="module">
+		function handleFormSubmit(event) {
+    
+    event.preventDefault();
+
+    // Ambil elemen form
+    const form = document.getElementById('orderForm');
+    
+    if (!form) {
+        console.error('Form not found');
+        return;
+    }
+
+    // Ambil data dari form
+    const formData = new FormData(form);
+    const formObject = {};
+
+    // Mengonversi FormData menjadi objek JavaScript biasa
+    formData.forEach((value, key) => {
+        formObject[key] = value;
+    });
+
+    // Ambil nilai-nilai dari objek formObject
+    const nama = formObject['first name'] + " " + formObject['last name'];
+    const noTelephone = formObject['noTelephone'];
+    const kesibukan = formObject['kesibukan'];
+    const email = formObject['email'];
+
+    // Membuat URL WhatsApp dengan parameter query yang telah di-encode
+    const url = `https://wa.me/6285333423070?text=Order%20Kelas%20Cyber%20House%0A%0AKelas:%20Mastering%20Cyber%20Security%20:%20Zero%20To%20Hero%0A%0ANama:%20${encodeURIComponent(nama)}%0A%0ANomor%20Telephone:%20${encodeURIComponent(noTelephone)}%0A%0ASekolah%20%2F%20Bekerja:%20${encodeURIComponent(kesibukan)}%0A%0AEmail:%20${encodeURIComponent(email)}`;
+
+    // Membuka URL dalam tab baru
+    window.open(url, "_blank");
+}
+
+		document.addEventListener('DOMContentLoaded', () => {
+			const form = document.getElementById('orderForm');
+			if (form) {
+				form.addEventListener('submit', handleFormSubmit);
+			}
+		});
+	</script>
+</html>

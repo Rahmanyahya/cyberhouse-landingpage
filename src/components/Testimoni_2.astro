@@ -1,0 +1,52 @@
+---
+import PersonIcon from '@astropub/icons/Person'
+const testimoni = [
+	{
+	    nama: 'Dimas',
+		title: 'Profesioanl IT',
+		comment: 'Sebagai seorang profesional IT, saya ingin memperdalam pengetahuan tentang keamanan siber. Cyber House memberikan pengalaman belajar yang menyenangkan dan fleksibel, sehingga saya bisa belajar tanpa mengganggu pekerjaan. Ini adalah investasi yang sangat berharga.'
+    },
+	{
+	    nama: 'Tika',
+		title: 'Freelancer Web Developer',
+		comment: 'Saya mengikuti bootcamp ini untuk meningkatkan keterampilan saya dalam keamanan siber agar dapat melindungi proyek-proyek web saya. Cyber House membuka mata saya tentang pentingnya keamanan digital, dan sekarang saya bisa membuat website yang lebih aman untuk klien saya.'
+	},
+	{
+		nama: 'Angga',
+		title: 'Junior Pentester',
+		comment: 'Saya memulai perjalanan saya dengan Cyber House dengan latar belakang yang minim di IT. Program ini memberikan dasar yang solid dan pengalaman praktis yang sangat berharga. Berkat bimbingan intensif dan dukungan komunitas, saya berhasil mendapatkan posisi sebagai Junior Pentester. Cyber House benar-benar mempersiapkan saya untuk dunia kerja dan membuat perbedaan besar dalam karir saya'
+	}
+]
+---
+
+<section class="px-2">
+    <center>
+        <h1 class="text-4xl font-extrabold text-[#f5ba20] " >APA KATA MEREKA SETELAH BELAJAR DI CYBER HOUSE?</h1>
+        <h1 class="mt-[1rem] w-[50%] max-lg:w-full" >Cyber House ga akan banyak ngomong nih ke kamu, kamu bisa lihat sendiri hasil dari para alumninya ya, kami keluarga bukan hanya teman belajar.</h1>
+    </center>
+	<center>
+		<div class="container px-2 mt-[3rem] text-left">
+			<div class="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
+				
+				{
+					testimoni.map(({nama,title,comment}) => (
+					<div class="rounded-lg bg-[#f5ba20] p-6 shadow-lg max-sm:w-full">
+					<div class="mb-4 flex items-center gap-3">
+						<PersonIcon size="25" class="mt-[-2.1rem]"/>
+						<div>
+							<h3 class="font-semibold text-lg">{nama}</h3>
+							<p class="text-gray-600">{title}</p>
+						</div>
+					</div>
+					<p class="text-gray-700">{comment}</p>
+				</div>
+					))
+				}
+				</div>
+	
+		</div>
+	</center>
+</section>
+
+    
+

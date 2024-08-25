@@ -1,0 +1,66 @@
+---
+import ContentSection from '~/components/content-section.astro';
+import CheckIcon from '@astropub/icons/Check'
+const benefit = [
+	{
+		Description: 'Strategi membangun portofolio yang relevan sesuai dengan kebutuhan industri selama 3 bulan.'
+	},
+	{
+		Description: 'Live mentoring, private diskusi, dan bedah portofolio secara live bareng Mentor untuk mengkoreksi dan membimbing kalian secaradetail'
+	},
+	{
+		Description: 'Akses ke 100+ modul terlengkap untuk meningkatkan skill dan membangun portofolio personal yang akan diupdate setiap bulannya'
+	},
+	{
+		Description: 'Akses ke 100+ modul terlengkap untuk meningkatkan skill dan membangun portofolio personal yang akan diupdate setiap bulannya'
+	}
+];
+---
+
+<ContentSection
+  title="JOIN & DAFTAR SEKARANG"
+  id="">
+  <div class="container mx-auto w-[50%] px-4 py-8 max-sm:w-[100%  max-lg:w-[100%] max-md:w-[100%]]">
+    <div class="rounded-t-lg bg-[#f5ba20] p-4">
+      <h2 class="font-bold text-white text-lg">Beginner - Profesional</h2>
+    </div>
+    <div class="rounded-b-lg bg-orange-100 p-6">
+      <div class="mb-4 flex items-center">
+        <span class="rounded-full bg-[#f5ba20] px-2.5 py-0.5 font-semibold text-white text-sm">Buruan Join !!! </span>
+      </div>
+      <h1 class="mb-2 font-bold text-black text-2xl">
+        Mastering Cyber Security : Zero To Hero
+      </h1>
+      <p class="mt-[1rem] font-semibold text-[#f5ba20]">
+        AKSES LIFETIME
+      </p>
+
+      <div class="mb-4 items-center">
+        <div class="mb-[1rem]">
+          <span class="text-red-500 line-through text-md max-sm:text-sm">Rp 10.000.000*</span>
+        </div>
+		<span class="py-[1rem] font-bold text-black text-2xl">Rp 5.000.000*</span>
+        <div class="mb-[1rem] mt-[1rem] w-full border-[1px] border-black"></div>
+      </div>
+      <div>
+        <h4 class="text-black">BENEFIT</h4>
+        <div>
+          {
+            benefit.map(({ Description }) => (
+              <div class="flex gap-2 font-bold mt-[1rem] text-left">
+                <CheckIcon size="100"  class="text-green-500 mt-[-1rem]" />
+                <h4 class="
+				text-black" >{Description}</h4>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <a href="/join-now" >
+        <button
+          class="rounded border-2 mt-[1rem] border-[#f5ba20] bg-[#f5ba20] w-full py-2 font-bold text-white transition-all duration-200 hover:bg-orange-100 hover:text-[#f5ba20]"
+        >Register Now</button>
+      </a>
+    </div>
+  </div>
+</ContentSection>

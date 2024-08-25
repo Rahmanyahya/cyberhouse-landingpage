@@ -1,24 +1,24 @@
 ---
 import { Image } from 'astro:assets';
 import Background from './Content/videoBaground.astro';
-import Hacker from '~/assets/Hacker-pana.png';
+import Hacker from '~/assets/home/Hacker-pana.png';
 
 const widths = [1000, 1000];
 const sizes = '(min-width: 640px) 10vw, 10vw';
 ---
 
-<section class="relative h-full w-full">
+<section class="relative h-full w-full" id="Home">
 	<Background />
 	<center>
 		<div class="grid grid-rows-2" >
-			<div class="mt-[1rem]">
+			<div class="mt-[1rem] max-lg:mt-[5rem] max-sm:mt-2">
 				<h1
-			class=" mx-[0.2rem] py-[4rem] text-4xl max-sm:py-[4rem] max-sm:text-2xl max-xl:py-[4rem]">
-		   Dapatkan Kesempatan <span class="text-[#f5ba20] font-extrabold"> Kerja Di Bidang <br class="max-md:hidden" > Cyber Security</span> 
-			<p class="mt-[1rem] text-white text-sm w-[90%]">
+			class=" mx-[0.2rem] py-[4rem] text-4xl max-sm:py-[4rem] max-sm:text-2xl max-xl:py-[4rem] max-lg:text-6xl">
+		   Dapatkan Kesempatan <span class="text-[#f5ba20] font-extrabold"> Kerja Di Bidang <br class="max-lg:hidden" > Cyber Security</span> 
+			<p class="mt-[1rem] text-white text-sm w-[90%] max-lg:text-xl max-sm:text-sm">
 				90% Profesional Cyber Security Menyatakan Portfolio <br class="max-sm:hidden" > Sangat Penting Untuk Bekerja
 			</p>
-			<p class="mt-[1rem] text-sm max-sm:mt-[1.5rem]">
+			<p class="mt-[1rem] text-sm max-sm:mt-[1.5rem] max-lg:text-xl max-sm:text-sm">
 				Gaji Rata Rata Cyber Security Berkisar <span
 					class="font-bold text-[#f5ba20]">
 					<br class="xl:hidden" />Rp.7.000.000 - Rp. 15.000.000</span
@@ -31,11 +31,13 @@ const sizes = '(min-width: 640px) 10vw, 10vw';
 				<Image
 				src={Hacker}
 				alt="ilustration"
-				class="mt-[-4rem] w-[355px] max-xl:w-[350px] max-sm:w-[340px] "
+				class="mt-[-4rem] w-[355px] max-xl:w-[350px] max-sm:w-[340px] max-lg:w-[550px] max-lg:mt-[-5rem]"
 			/>
-			<button class="bg-[#f5ba20] px-[5rem] py-3 rounded-md hover:bg-transparent border-2 border-[#f5ba20] transition-all duration-500 max-sm:px-[5rem]" >
-				<a>Join Now</a>
-			</button>
+			<a href="/join-now" >
+				<button class="bg-[#f5ba20] px-[5rem] py-3 max-lg:px-[8rem] max-lg:py-5 rounded-md hover:bg-transparent border-2 border-[#f5ba20] transition-all duration-500 max-sm:px-[5rem]" >
+					Join Now
+				</button></a>
+			
 			</div>
 		</div>
 		

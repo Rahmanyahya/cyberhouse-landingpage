@@ -1,87 +1,89 @@
 ---
 import ContentSection from '~/components/content-section.astro';
 import { Image } from 'astro:assets';
-import Gambar1 from '~/assets/Dev.png';
-import Gambar2 from '~/assets/Online consulting-rafiki.png';
-import Gambar3 from '~/assets/comunity.webp'
+import Gambar1 from '~/assets/benefit/Dev.png';
+import Gambar2 from '~/assets/benefit/Online consulting-rafiki.png';
+import Gambar3 from '~/assets/benefit/comunity.webp'
 ---
 
 <ContentSection
-	title="Kenapa Belajar Di Cyber House?"
+	title="KENAPA BELAJAR DI CYBER HOUSE?"
 	id="Aboutus">
 	
-	<!-- Table 1 -->
-	<div class="bg-offset grid grid-cols-2 rounded-md max-w-6xl max-lg:grid-cols-1" >
-        <div class="p-5 max-lg:order-1" >
-		  <h1 class="text-2xl font-bold" >DIBIMBING SAMPAI BISA DAPAT PROJECT PERTAMA</h1>
-		  <h1 class="mt-[1rem] text-xl font-bold text-[#f5ba20]" >AKSES LIFETIME</h1>
-		  <p class="mt-[1rem]" >Kamu akan dibimbing dari 0 sampai bisa buat portofolio pertama lewat berbagai modul dan project-project penunjang. Diajarkan langsung oleh expert di industri yang sudah memiliki sertifikasi Certified Information Systems Security Professional (CISSP) ISC2</p>
-		  <div class="flex mt-[1.5rem] gap-6" >
-			<div class="grid grid-rows-2">
-			   <div>
-				<h1 class="font-bold  text-xl ml-1" >100+</h1>
-			   </div>
-			   <div>
-				<h1 class="text-md" >Modules</h1>
-			   </div>
+<div class="px-2" >
+		<!-- Table 1 -->
+		<div class="bg-offset grid grid-cols-2 rounded-md max-w-6xl max-lg:grid-cols-1" >
+			<div class="p-5 max-lg:order-1" >
+			  <h1 class="text-2xl font-bold" >DIBIMBING SAMPAI BISA DAPAT PROJECT PERTAMA</h1>
+			  <h1 class="mt-[1rem] text-xl font-bold text-[#f5ba20]" >AKSES LIFETIME</h1>
+			  <p class="mt-[1rem]" >Kamu akan dibimbing dari 0 sampai bisa buat portofolio pertama lewat berbagai modul dan project-project penunjang. Diajarkan langsung oleh expert di industri yang sudah memiliki sertifikasi Certified Information Systems Security Professional (CISSP) ISC2</p>
+			  <div class="flex mt-[1.5rem] gap-6" >
+				<div class="grid grid-rows-2">
+				   <div>
+					<h1 class="font-bold  text-xl ml-1" >100+</h1>
+				   </div>
+				   <div>
+					<h1 class="text-md" >Modules</h1>
+				   </div>
+				</div>
+	
+				<div class="grid grid-rows-2">
+					<div>
+					 <h1 class="font-bold m text-xl ml-5" >50+</h1>
+					</div>
+					<div>
+					 <h1 class="text-md" >Live Class</h1>
+					</div>
+				 </div>
+	
+				 <div class="grid grid-rows-2">
+					<div>
+					 <h1 class="font-bold px- text-xl ml-12" >10+</h1>
+					</div>
+					<div>
+					 <h1 class="text-md" >Practice Modules</h1>
+					</div>
+				 </div>
+	
+			  </div>
 			</div>
-
-			<div class="grid grid-rows-2">
-				<div>
-				 <h1 class="font-bold m text-xl ml-5" >50+</h1>
-				</div>
-				<div>
-				 <h1 class="text-md" >Live Class</h1>
-				</div>
-			 </div>
-
-			 <div class="grid grid-rows-2">
-				<div>
-				 <h1 class="font-bold px- text-xl ml-12" >10+</h1>
-				</div>
-				<div>
-				 <h1 class="text-md" >Practice Modules</h1>
-				</div>
-			 </div>
-
-		  </div>
+	
+			<div>
+				<center>
+					<Image loading="lazy" alt="Image 1" src={Gambar1} width={450} class="max-lg:order-2" />
+				</center>
+			</div>
 		</div>
-
-		<div>
-			<center>
-				<Image alt="Image 1" src={Gambar1} width={450} class="max-lg:order-2" />
-			</center>
+	
+		<!-- Table 2 -->
+		<div class="bg-offset mt-[2rem] grid grid-cols-2 rounded-md max-w-6xl max-lg:grid-cols-1" >
+			<div>
+				<center>
+					<Image loading="lazy" alt="Image 1" src={Gambar2} width={400} class="max-lg:order-2" />
+				</center>
+			</div>
+			<div class="p-5 max-lg:order-1" >
+				<h1 class="text-2xl font-bold" >LIVE MENTORING & BEDAH PORTOFOLIO</h1>
+				<p class="mt-[2rem]" >- LIVE MENTORING 2X SEMINGGU <br/><br/>
+					- KONSULTASI KARIR & BEDAH PORTOFOLIO</p>
+				<p class="mt-[2rem]">Evaluasi hasil praktek modul dan konsultasikan semua kebingunganmu sepuasnya untuk bangun portofolio yang relevan dengan industri</p>
+			  </div>
 		</div>
-	</div>
-
-    <!-- Table 2 -->
-    <div class="bg-offset grid grid-cols-2 rounded-md max-w-6xl max-lg:grid-cols-1" >
-		<div>
-			<center>
-				<Image alt="Image 1" src={Gambar2} width={400} class="max-lg:order-2" />
-			</center>
+	
+		<!-- Table 3 -->
+		<div class="bg-offset mt-[2rem] grid grid-cols-2 rounded-md max-w-6xl max-lg:grid-cols-1" >
+			<div class="p-5 max-lg:order-1" >
+				<h1 class="text-2xl font-bold" >KOMUNITAS EXCLUSIVE</h1>
+				<p class="mt-[2rem] text-xl" >Perkembangan industri Cyber Security yang cepat membuat kita harus adaptif dan updated, makanya komunitas VIP hadir dengan tujuan untuk diskusi, berbagi pengalaman, networking, dan sharing informasi lowongan kerja dan lainnya.</p>
+			  </div>
+			
+			  <div>
+				<center>
+					<Image loading="lazy" alt="Image 1" src={Gambar3} width={400} class="max-lg:order-2" />
+				</center>
+			</div>
 		</div>
-		<div class="p-5 max-lg:order-1" >
-			<h1 class="text-2xl font-bold" >LIVE MENTORING & BEDAH PORTOFOLIO</h1>
-			<p class="mt-[2rem]" >- LIVE MENTORING 2X SEMINGGU <br/><br/>
-				- KONSULTASI KARIR & BEDAH PORTOFOLIO</p>
-			<p class="mt-[2rem]">Evaluasi hasil praktek modul dan konsultasikan semua kebingunganmu sepuasnya untuk bangun portofolio yang relevan dengan industri</p>
-		  </div>
-	</div>
-
-	<!-- Table 3 -->
-    <div class="bg-offset grid grid-cols-2 rounded-md max-w-6xl max-lg:grid-cols-1" >
-		<div class="p-5 max-lg:order-1" >
-			<h1 class="text-2xl font-bold" >KOMUNITAS EXCLUSIVE</h1>
-			<p class="mt-[2rem] text-xl" >Perkembangan industri Cyber Security yang cepat membuat kita harus adaptif dan updated, makanya komunitas VIP hadir dengan tujuan untuk diskusi, berbagi pengalaman, networking, dan sharing informasi lowongan kerja dan lainnya.</p>
-		  </div>
-		
-		  <div>
-			<center>
-				<Image alt="Image 1" src={Gambar3} width={400} class="max-lg:order-2" />
-			</center>
-		</div>
-	</div>
+</div>
 
 
 </ContentSection>
